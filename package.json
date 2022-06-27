@@ -1,0 +1,23 @@
+{
+  "name": "inclusive-web-components",
+  "version": "0.0.1",
+  "description": "Inclusive UI elements library based on web components",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write ."
+  },
+  "author": "Fausto Braz",
+  "license": "MIT",
+  "devDependencies": {
+    "lit": "^2.0.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fstbraz/inclusive-web-components.git"
+  }
+}
