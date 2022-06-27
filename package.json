@@ -9,7 +9,10 @@
     "format": "npx prettier --write .",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "author": "Fausto Braz",
   "license": "MIT",
