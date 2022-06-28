@@ -1,10 +1,10 @@
 {
   "name": "inclusive-web-components",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Inclusive UI elements library based on web components",
   "files": ["lib/**/*"],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/public_api.js",
+  "types": "lib/public_api.d.ts",
   "scripts": {
     "format": "npx prettier --write .",
     "lint": "tslint -p tsconfig.json",
@@ -16,8 +16,11 @@
   },
   "author": "Fausto Braz",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "lit": "^2.0.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
     "prettier": "^2.7.1",
     "ts-loader": "^9.2.5",
     "tslint": "^6.1.3",
