@@ -10,6 +10,6 @@
     "outDir": "./lib",
     "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": ["src", "index.ts", "public_api.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
