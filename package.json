@@ -1,6 +1,6 @@
 {
   "name": "inclusive-web-components",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Inclusive UI elements library based on web components",
   "files": ["lib/**/*"],
   "main": "lib/index.js",
@@ -17,8 +17,7 @@
   "author": "Fausto Braz",
   "license": "MIT",
   "dependencies": {
-    "lit": "^2.0.0",
-    "tslib": "^2.3.0"
+    "lit": "^2.0.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
