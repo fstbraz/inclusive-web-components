@@ -1,10 +1,10 @@
 {
   "name": "inclusive-web-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Inclusive UI elements library based on web components",
   "files": ["lib/**/*"],
-  "main": "lib/public_api.js",
-  "types": "lib/public_api.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "format": "npx prettier --write .",
     "lint": "tslint -p tsconfig.json",
