@@ -76,7 +76,7 @@
 
 ## About The Project
 
-[![Inclusive components][product-screenshot]](https://github.com/fstbraz/inclusive-web-components/blob/develop/img/thumb.png)
+[![Inclusive components][product-screenshot]](https://raw.githubusercontent.com/fstbraz/inclusive-web-components/develop/img/thumb.png)
 
 Web components library port of [Inclusive components](https://inclusive-components.design/)
 
