@@ -184,7 +184,7 @@ Project Link: [https://github.com/fstbraz/inclusive-web-components](https://gith
 [issues-shield]: https://img.shields.io/github/issues/fstbraz/inclusive-web-components.svg?style=for-the-badge
 [issues-url]: https://github.com/fstbraz/inclusive-web-components/issues
 [license-shield]: https://img.shields.io/github/license/fstbraz/inclusive-web-components.svg?style=for-the-badge
-[license-url]: https://github.com/fstbraz/inclusive-web-components/blob/master/LICENSE.txt
+[license-url]: https://github.com/fstbraz/inclusive-web-components/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/fstbraz/
+[product-screenshot]: img/thumb.png
