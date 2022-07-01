@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/fstbraz/inclusive-web-components">
-    <img src="img/thumb.png" alt="Logo" width="80" height="80">
+    <img src="img/thumb.png" alt="Logo" width="150" height="141">
   </a>
 
 <h3 align="center">Inclusive web components</h3>
