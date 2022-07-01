@@ -33,8 +33,6 @@
 <h3 align="center">Inclusive web components</h3>
 
   <p align="center">
-    project_description
-    <br />
     <a href="https://github.com/fstbraz/inclusive-web-components"><strong>Explore the docs »</strong></a>
     <br />
     <br />
