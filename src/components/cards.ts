@@ -1,11 +1,14 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { repeat } from 'lit/directives/repeat.js';
 import { Card } from './card';
 import { sharedStyles } from './shared/style';
 
 const componentStyle = css`
   .cards > ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   @supports (display: grid) {
@@ -18,24 +21,18 @@ const componentStyle = css`
   }
 `;
 
-@customElement('cards')
+@customElement('cards-images')
 export class Cards extends LitElement {
   static styles = [sharedStyles, componentStyle];
 
-  @property()
+  @property({ type: Array })
   cards!: Card[];
 
   render() {
     return html` <div class="cards">
       <ul>
-        ${this.cards.map((card) => html`<card card="${card}"></card>`)}
+        ${repeat(this.cards, (current) => html` <card-image .card=${current}></card-image> `)}
       </ul>
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    cards: Cards;
   }
 }
