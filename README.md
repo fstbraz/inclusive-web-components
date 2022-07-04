@@ -97,7 +97,8 @@ This is an example of how to list things you need to use the software and how to
 
 - node
 - npm
-  ```npm install npm@latest -g
+  ```
+  npm install npm@latest -g
   ```
 
 ### Installation
@@ -131,6 +132,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [X] First Component
 - [ ] Unit Tests Setup
 - [ ] Migrate the remaining components
+- [ ] Storybook configuration
+- [ ] Migrate to eslint
 - [ ] Improvements
 
 See the [open issues](https://github.com/fstbraz/inclusive-web-components/issues) for a full list of proposed features (and known issues).
