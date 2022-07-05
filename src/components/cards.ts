@@ -1,7 +1,7 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
-import { Card } from './card';
+import { CardConfig } from './card';
 import { sharedStyles } from './shared/style';
 
 const componentStyle = css`
@@ -26,7 +26,7 @@ export class Cards extends LitElement {
   static styles = [sharedStyles, componentStyle];
 
   @property({ type: Array })
-  cards!: Card[];
+  cards!: CardConfig[];
 
   render() {
     return html` <div class="cards">

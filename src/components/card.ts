@@ -2,13 +2,15 @@ import { css, html, LitElement } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { sharedStyles } from './shared/style';
 
-export interface Card {
+export interface CardConfig {
   altText: string;
   ctaText: string;
   image: string;
   link: string;
   text: string;
   textDesc: string;
+  textDescLink: string;
+  title: string;
 }
 
 const componentStyle = css`
@@ -119,35 +121,37 @@ export class Card extends LitElement {
   declare down: number;
 
   @property({ type: Object })
-  card!: Card;
+  card!: CardConfig;
 
   @query('#card-link')
   cardLinkEl: any;
 
   render() {
     return html`
-      <li class="card" @mousedown="${this.mouseDown}" @mouseup="${this.mouseUp}">
+      <li class="card" @mousedown="${this.mouseDown}" @mouseup="${this.handleClick}">
         <div class="img"><img src="${this.card.image}" alt="${this.card.altText}" /></div>
         <div class="text">
           <h2>
-            <a id="card-link" href="${this.card.link}" aria-describedby="desc-a-card">${this.card.title}</a>
+            <a id="card-link" href="${this.card.link}" @click="${this.handleClick}" aria-describedby="desc-a-card"
+              >${this.card.title}</a
+            >
           </h2>
           <p>${this.card.text}</p>
           <span class="cta" aria-hidden="true" id="desc-a-card">${this.card.ctaText}</span>
-          <small><a href="#author-link">${this.card.textDesc}</a></small>
+          <small><a href="${this.card.textDescLink}">${this.card.textDesc}</a></small>
         </div>
       </li>
     `;
   }
 
-  private mouseDown() {
+  public mouseDown() {
     this.down = Number(new Date());
   }
 
-  private mouseUp() {
+  public handleClick() {
     this.up = Number(new Date());
     if (this.up - this.down < 200) {
-      this.cardLinkEl.click();
+      this.dispatchEvent(new CustomEvent('readMore', { detail: this.card, composed: true }));
     }
   }
 }
