@@ -84,12 +84,13 @@ const componentStyle = css`
 
   .card small a {
     position: relative;
+    text-decoration: none;
     padding: 0.5rem 0;
   }
 
   .card small a:hover,
   .card small a:focus {
-    font-weight: bold;
+    text-decoration: underline;
   }
 
   .card .text > * + * {
@@ -124,7 +125,7 @@ export class Card extends LitElement {
   card!: CardConfig;
 
   @query('#card-link')
-  cardLinkEl: any;
+  cardLinkEl!: HTMLAnchorElement;
 
   render() {
     return html`

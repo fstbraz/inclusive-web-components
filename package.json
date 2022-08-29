@@ -1,6 +1,6 @@
 {
   "name": "inclusive-web-components",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Inclusive UI elements library based on web components",
   "files": [
     "lib/**/*"
