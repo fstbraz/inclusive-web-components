@@ -1,7 +1,11 @@
 import { css } from 'lit';
 
 export const sharedStyles = css`
-  :root {
-    font-family: 'Arial', sans-serif;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: Arial, sans-serif;
   }
 `;

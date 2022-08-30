@@ -14,6 +14,10 @@ export interface CardConfig {
 }
 
 const componentStyle = css`
+  h2 {
+    margin-bottom: 1rem;
+  }
+
   .card + .card {
     margin-top: 1.5rem;
   }
@@ -112,6 +116,10 @@ const componentStyle = css`
     border-radius: 0.25rem;
     text-align: center;
   }
+
+  .cta > a {
+    text-decoration: none;
+  }
 `;
 
 @customElement('card-image')
@@ -129,30 +137,46 @@ export class Card extends LitElement {
 
   render() {
     return html`
-      <li class="card" @mousedown="${this.mouseDown}" @mouseup="${this.handleClick}">
-        <div class="img"><img src="${this.card.image}" alt="${this.card.altText}" /></div>
+      <li class="card">
+        <div class="img">
+          <img
+            src="${this.card.image}"
+            alt="${this.card.altText}"
+            @mousedown="${this.mouseDown}"
+            @mouseup="${this.handleClick}"
+          />
+        </div>
         <div class="text">
           <h2>
-            <a id="card-link" href="${this.card.link}" @click="${this.handleClick}" aria-describedby="desc-a-card"
+            <a
+              id="card-link"
+              href="${this.card.link}"
+              @mousedown="${this.mouseDown}"
+              @mouseup="${this.handleClick}"
+              aria-describedby="desc-a-card"
               >${this.card.title}</a
             >
           </h2>
           <p>${this.card.text}</p>
-          <span class="cta" aria-hidden="true" id="desc-a-card">${this.card.ctaText}</span>
+          <span class="cta" aria-hidden="true" id="desc-a-card"
+            ><a href="${this.card.link}">${this.card.ctaText}</a>
+          </span>
           <small><a href="${this.card.textDescLink}">${this.card.textDesc}</a></small>
         </div>
       </li>
     `;
   }
 
-  public mouseDown() {
+  mouseDown() {
     this.down = Number(new Date());
   }
 
-  public handleClick() {
+  handleClick() {
     this.up = Number(new Date());
-    if (this.up - this.down < 200) {
-      this.dispatchEvent(new CustomEvent('readMore', { detail: this.card, composed: true }));
+    const total = this.up - this.down;
+
+    if (total < 200) {
+      this.cardLinkEl.click();
     }
   }
 }
