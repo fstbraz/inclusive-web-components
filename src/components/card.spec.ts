@@ -44,7 +44,7 @@ describe('Card Component', () => {
   });
 
   it('it renders the cta text', () => {
-    const ctaText = el.shadowRoot?.querySelector('.cta');
+    const ctaText = el.shadowRoot?.querySelector('.cta a');
     expect(ctaText).to.exist;
     expect(ctaText?.textContent).to.equal(card.ctaText);
   });
